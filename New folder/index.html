@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <title>Will You hang out with me</title>
+
+    <style>
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0;
+            z-index: -1;
+            opacity: 0.8;
+            height: 100vh;
+            width: 100vw;
+            background: url('/sad-romance-anime-u1.jpg') center/cover no-repeat;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: #ffffff;
+            font-family: 'Playball', cursive;
+        
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            font-size: 1rem;
+            /* border: 3px solid red; */
+            border-radius: 13px;
+            height: 50px;
+            width: 135px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            margin-top: 8em;
+        }
+
+        #btn2 {
+            position: absolute;
+            top: 18.75em;
+            right: 15em;
+        }
+
+        #btn1 {
+            margin-left: 12em;
+        }
+
+        #option {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        @media screen and (max-width:750px) {
+            button {
+                font-size: 12px;
+                height: 45px;
+                width: 100px;
+            }
+
+            #btn1 {
+                margin-left: 1em;
+                margin-top: 2.3em;
+            }
+
+            #btn2 {
+                right: 15px;
+                top: 18em;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+            body::before{
+                background: url('/mobile.jpg') center/cover no-repeat;
+            }
+            #new{
+                color: pink;
+            }
+        }
+
+        @media screen and (max-width:550px){
+            #btn2{
+                top: 20em;
+            }
+        }
+    </style>
+</head>
+<h1>Will You come with me on <font id="new" color="#ff48e8">prom</font>  night?</h1>
+<div>
+    <img src="https://media.tenor.com/rxdvWuIS89IAAAAd/puppy-dog.gif" height="200" alt="Pleaseeeee">
+
+</div>
+<div id="option">
+    <button id="btn1" onclick="f1();">Yess for sure!!!!</button>
+    <button id="btn2" onmouseover="f();" ontouchstart="f();">Nooooooooooo</button>
+</div>
+<script>
+    const buttonh = 150;
+    const buttonw = 150;
+
+    const maxWidth = window.innerWidth - buttonw;
+    const maxHeight = window.innerHeight - buttonh;
+    function f1() {
+        alert("Yeehhh~~~~  Thank You very much!!... ❤️")
+    }
+    function f() {
+        btn2 = document.getElementById('btn2')
+        btn2.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
+        btn2.style.top = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
+    }
+</script>
+</body>
+
+</html>
